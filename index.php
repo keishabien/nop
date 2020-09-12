@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Nite Owl Productions</title>
-    <link rel="stylesheet" href="sass/general.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="body-wrapper">
