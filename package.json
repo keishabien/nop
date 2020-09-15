@@ -1,0 +1,27 @@
+{
+  "name": "niteowl",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.php",
+  "dependencies": {
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "pipe-concat": "0.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keishabien/nop.git"
+  },
+  "author": "Keisha Bien/zombiebean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keishabien/nop/issues"
+  },
+  "homepage": "https://github.com/keishabien/nop#readme"
+}

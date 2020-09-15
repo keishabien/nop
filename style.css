@@ -43,7 +43,7 @@ header {
   position: relative;
 }
 .logo:before {
-  content: url("logo-mint.svg");
+  content: url("assets/logo-mint.svg");
   position: absolute;
   left: -2px;
   text-shadow: -5px 0 #ffda00;
@@ -90,8 +90,8 @@ header {
   }
 }
 /* Typewriter */
-.anim-typewriter {
-  animation: typewriter 2.5s steps(24) 1s 1 normal both, blinkTextCursor 550ms steps(24) infinite normal, glitch 5s 5s infinite;
+.type-write {
+  animation: typewriter 2.5s steps(24) 1s 1 normal both, blinkCursor 550ms steps(24) infinite normal, glitch 5s 5s infinite;
 }
 
 @keyframes typewriter {
@@ -102,7 +102,7 @@ header {
     width: 14em;
   }
 }
-@keyframes blinkTextCursor {
+@keyframes blinkCursor {
   from {
     border-right-color: #00f57d;
     border-right-width: 13px;

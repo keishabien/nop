@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/*
+eggplant #140514 rgb(20,5,20)
+purple #8c00ff rgb(140,0,255)
+pink #ef00a1 rgb(239,0,161)
+mint #00f57d rgb(0,245,125)
+yeller #ffda00 rgb(255,218,0)
+*/
+
+//sdfs
+html {
+  background-color: #140514;
+  font-family: 'Space Mono', sans-serif;
+}
+
+h1 {
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  color: #00f57d;
+  margin: 10px 0;
+}
+
+header {
+  margin: 0 0 15px;
+  padding: 15px 0;
+  width: 100%;
+  position: relative;
+}
+
+.body-wrapper {
+  max-width: 600px;
+  width: 100%;
+  top: 50px;
+  left: 145px;
+  position: relative;
+}
+
+.logo {
+  width: 250px;
+  position: relative;
+  animation: noise-1 1s linear infinite alternate-reverse;
+
+  &:before {
+    content: url("assets/logo-mint.svg");
+    position: absolute;
+    left: -2px;
+    text-shadow: -5px 0 #ffda00;
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse;
+  }
+}
+
+.line-1 {
+  position: relative;
+  width: 14em;
+  margin: 0;
+  left: 12px;
+  border-right: 13px solid rgb(0, 245, 125);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: -5px 0 #ffda00;
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse;
+  }
+
+  &:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -5px 0 #ef00a1;
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear infinite alternate-reverse;
+  }
+}
+
+@keyframes glitch {
+  1% {
+    transform: rotateX(13deg) skewX(82deg);
+  }
+  2% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+/* Typewriter */
+.type-write {
+  animation: typewriter 2.5s steps(24) 1s 1 normal both,
+  blinkCursor 550ms steps(24) infinite normal,
+  glitch 5s 5s infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14em;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgb(0, 245, 125);
+    border-right-width: 13px
+  }
+  to {
+    border-right-color: transparent;
+    border-right-width: 13px
+  }
+}
+
+// glitch
+
+@keyframes noise-1 {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}

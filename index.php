@@ -33,7 +33,7 @@
 
     <main>
         <div class="glitch-container">
-            <h1 class="line-1 anim-typewriter" data-text="Reboooting Production...">
+            <h1 class="line-1 type-write" data-text="Reboooting Production...">
                 Reboooting Production...
             </h1>
         </div>
