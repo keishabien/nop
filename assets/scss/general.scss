@@ -8,9 +8,11 @@ purple #8c00ff rgb(140,0,255)
 pink #ef00a1 rgb(239,0,161)
 mint #00f57d rgb(0,245,125)
 yeller #ffda00 rgb(255,218,0)
+
+test
+
 */
 
-//sdfs
 html {
   background-color: #140514;
   font-family: 'Space Mono', sans-serif;
@@ -45,7 +47,7 @@ header {
 .logo {
   width: 250px;
   position: relative;
-  animation: noise-1 1s linear infinite alternate-reverse;
+  //animation: noise-1 1s linear infinite alternate-reverse;
 
   &:before {
     content: url("assets/logo-mint.svg");
