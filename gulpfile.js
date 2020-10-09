@@ -44,7 +44,7 @@ gulp.task('serve', function () {
     });
 
     gulp.watch(sassFiles, gulp.series(['clean', 'styles']));
-    // gulp.watch('./**/*.php').on('change', browserSync.reload);
+    gulp.watch('./*.php').on('change', browserSync.reload);
 });
 
 // Default Task

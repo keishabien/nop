@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 /*
 eggplant #140514 rgb(20,5,20)
 purple #8c00ff rgb(140,0,255)
 pink #ef00a1 rgb(239,0,161)
 mint #00f57d rgb(0,245,125)
 yeller #ffda00 rgb(255,218,0)
-
-test
-
 */
-
+body, html {
+  margin: 0
+}
 html {
   background-color: #140514;
   font-family: 'Space Mono', sans-serif;
@@ -40,8 +38,13 @@ header {
   max-width: 600px;
   width: 100%;
   top: 50px;
-  left: 145px;
+  margin-left: 10px;
   position: relative;
+
+  @media screen and (min-width: 1024px) {
+    //left: 145px;
+  }
+
 }
 
 .logo {
@@ -88,6 +91,10 @@ header {
     overflow: hidden;
     top: 0;
     animation: noise-2 3s linear infinite alternate-reverse;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.1rem;
   }
 }
 
