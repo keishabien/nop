@@ -12,21 +12,17 @@ sass.compiler = require('node-sass');
 
 //style paths
 const sassFiles = 'assets/scss/*.scss',
-    cssDest = './';
+    cssDest = './',
+    jsFiles = 'assets/js/*.js';
 
 gulp.task('styles', function () {
-    // const styles = pipeConcat(
     return gulp.src(sassFiles)
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.css'))
         .pipe(gulp.dest(cssDest))
         .pipe(browserSync.stream());
-    // );
-    // styles.on('end',() => {
-    //     console.log('compile finished!')
-    // });
-    // return styles;
 });
+
 
 gulp.task('clean', () => {
     return del([
@@ -45,6 +41,7 @@ gulp.task('serve', function () {
 
     gulp.watch(sassFiles, gulp.series(['clean', 'styles'])).on('change', browserSync.reload);
     gulp.watch('./*.php').on('change', browserSync.reload);
+    // gulp.watch('assets/*.js').on('change', browserSync.reload);
 });
 
 // Default Task

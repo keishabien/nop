@@ -9,7 +9,8 @@ mint #00f57d rgb(0,245,125)
 yeller #ffda00 rgb(255,218,0)
 */
 body, html {
-  margin: 0
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -26,17 +27,23 @@ h1 {
   letter-spacing: -.03em;
   color: #00f57d;
   margin: 10px 0;
+
+  &.glitch-container {
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
 }
 
 header {
-  margin: 0 0 15px;
-  padding: 15px 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
   position: relative;
 }
 
 .body-wrapper {
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   top: 50px;
   margin-left: 10px;
@@ -66,41 +73,80 @@ header {
 
 .line-1 {
   position: relative;
-  width: 14em;
-  margin: 0;
+  margin: 0 10px 0 0;
   left: 12px;
-  border-right: 13px solid rgb(0, 245, 125);
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
 
   &:before {
-    content: attr(data-text);
+    content: attr(data-words);
     position: absolute;
     left: -2px;
-    text-shadow: -5px 0 #ffda00;
+    color: #ffda00;
+    //text-shadow: -5px 0 #ffda00;
     overflow: hidden;
-    top: 0;
-    animation: noise-1 3s linear infinite alternate-reverse;
+    top: 5px;
+    z-index: -1;
+    animation: 3s ease 0s normal forwards 1 fadein,
+        noise-1 3s linear infinite alternate-reverse;
   }
 
   &:after {
-    content: attr(data-text);
+    content: attr(data-words);
     position: absolute;
-    left: 2px;
-    text-shadow: -5px 0 #ef00a1;
+    left: 4px;
+    color: #ef00a1;
+    //text-shadow: -5px 0 #ef00a1;
     overflow: hidden;
-    top: 0;
-    animation: noise-2 3s linear infinite alternate-reverse;
+    top: 15px;
+    animation: 3s ease 0s normal forwards 1 fadein,
+        noise-2 3s linear infinite alternate-reverse;
   }
 
-  @media screen and (min-width: 320px) {
-    width: 260px;
+  //@media screen and (min-width: 320px) {
+  //  width: 260px;
+  //}
+  //@media screen and (max-width: 600px) {
+  //  font-size: 1.1rem;
+  //}
+}
+
+.cursor-blink {
+  position: relative;
+
+  &:before {
+    content: attr(data-cursor-display);
+    position: absolute;
+    left: -2px;
+    color: #ffda00;
+    //text-shadow: -5px 0 #ffda00;
+    overflow: hidden;
+    top: 5px;
+    z-index: -1;
+    animation: 3s ease 0s normal forwards 1 fadein,
+    noise-1 3s linear infinite alternate-reverse;
   }
-  @media screen and (max-width: 600px) {
-    font-size: 1.1rem;
+
+  &:after {
+    content: attr(data-cursor-display);
+    position: absolute;
+    left: 4px;
+    color: #ef00a1;
+    //text-shadow: -5px 0 #ef00a1;
+    overflow: hidden;
+    top: 15px;
+    animation: 3s ease 0s normal forwards 1 fadein,
+    noise-2 3s linear infinite alternate-reverse;
   }
 }
+
+@keyframes fadein{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+
 
 @keyframes glitch {
   1% {
@@ -114,7 +160,6 @@ header {
 /* Typewriter */
 .type-write {
   animation: typewriter 2.5s steps(24) 1s 1 normal both,
-  blinkCursor 550ms steps(24) infinite normal,
   glitch 5s 5s infinite;
 }
 
@@ -127,16 +172,6 @@ header {
   }
 }
 
-@keyframes blinkCursor {
-  from {
-    border-right-color: rgb(0, 245, 125);
-    border-right-width: 13px
-  }
-  to {
-    border-right-color: transparent;
-    border-right-width: 13px
-  }
-}
 
 // glitch
 

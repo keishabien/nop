@@ -6,7 +6,8 @@
   "dependencies": {
     "del": "^6.0.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "tiper-js": "^1.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.12",
