@@ -43,7 +43,7 @@ gulp.task('serve', function () {
         proxy: "niteowl/"
     });
 
-    gulp.watch(sassFiles, gulp.series(['clean', 'styles']));
+    gulp.watch(sassFiles, gulp.series(['clean', 'styles'])).on('change', browserSync.reload);
     gulp.watch('./*.php').on('change', browserSync.reload);
 });
 

@@ -11,6 +11,7 @@ yeller #ffda00 rgb(255,218,0)
 body, html {
   margin: 0
 }
+
 html {
   background-color: #140514;
   font-family: 'Space Mono', sans-serif;
@@ -93,6 +94,9 @@ header {
     animation: noise-2 3s linear infinite alternate-reverse;
   }
 
+  @media screen and (min-width: 320px) {
+    width: 260px;
+  }
   @media screen and (max-width: 600px) {
     font-size: 1.1rem;
   }
