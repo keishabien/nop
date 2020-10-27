@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <head>
     <meta charset="UTF-8">
     <title>Nite Owl Productions</title>
@@ -46,11 +46,12 @@
                   data-cursor-display="&#9613;"></span>
         </h1>
     </main>
+    <div style="clear:both;"></div>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-<script src="scripts.js"></script>
+<!--<script src="scripts.js"></script>-->
 </body>
 </html>
