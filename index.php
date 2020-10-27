@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Nite Owl Productions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="body-wrapper">
@@ -37,7 +38,7 @@
             <span
                     class="typer line-1" id="main"
                     data-words="reboooting production..."
-                    data-delay="100"
+                    data-delay="225"
                     data-deleteDelay="1000"
                     data-loop="false"
                     data-colors="#00f57d">
@@ -51,6 +52,6 @@
 
 
 <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </body>
-
 </html>
