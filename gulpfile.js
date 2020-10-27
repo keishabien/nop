@@ -42,7 +42,6 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src('assets/js/*.js')
-        // .pipe(sass().on('error', sass.logError))
         .pipe(jshint())
         .pipe(jscs({configPath: '.jscsrc'}))
         .pipe(jshint.reporter('jshint-stylish', {

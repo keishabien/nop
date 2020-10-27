@@ -78,31 +78,31 @@ header {
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
-
-  &:before {
-    content: attr(data-words);
-    position: absolute;
-    left: -2px;
-    color: #ffda00;
-    //text-shadow: -5px 0 #ffda00;
-    overflow: hidden;
-    top: 5px;
-    z-index: -1;
-    animation: 3s ease 0s normal forwards 1 fadein,
-        noise-1 3s linear infinite alternate-reverse;
-  }
-
-  &:after {
-    content: attr(data-words);
-    position: absolute;
-    left: 4px;
-    color: #ef00a1;
-    //text-shadow: -5px 0 #ef00a1;
-    overflow: hidden;
-    top: 15px;
-    animation: 3s ease 0s normal forwards 1 fadein,
-        noise-2 3s linear infinite alternate-reverse;
-  }
+  //
+  //&:before {
+  //  content: attr(data-words);
+  //  position: absolute;
+  //  left: -2px;
+  //  color: #ffda00;
+  //  //text-shadow: -5px 0 #ffda00;
+  //  overflow: hidden;
+  //  top: 5px;
+  //  z-index: -1;
+  //  animation: 3s ease 0s normal forwards 1 fadein,
+  //      noise-1 3s linear infinite alternate-reverse;
+  //}
+  //
+  //&:after {
+  //  content: attr(data-words);
+  //  position: absolute;
+  //  left: 4px;
+  //  color: #ef00a1;
+  //  //text-shadow: -5px 0 #ef00a1;
+  //  overflow: hidden;
+  //  top: 15px;
+  //  animation: 3s ease 0s normal forwards 1 fadein,
+  //      noise-2 3s linear infinite alternate-reverse;
+  //}
 
   //@media screen and (min-width: 320px) {
   //  width: 260px;
